@@ -11,7 +11,7 @@ app.controller('SearchCtrl', ['$scope', '$http', 'apiAuth', function ($scope, $h
   var searchTemplate = {
     searchStr: "",
     resultCount: 0,
-    message: "Search by tag, only enter on word tags",
+    message: "Search by tag, only enter one word tags",
     results: []
   };
   $scope.currentSearch = Object.create(searchTemplate);
