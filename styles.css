@@ -1,0 +1,42 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+.logo {
+  width: 400px;
+  height: auto; }
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%; }
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif; }
+
+.search-form {
+  position: relative; }
+  .search-form .search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none !important;
+    box-shadow: none;
+    border-radius: 1000px; }
+    .search-form .search-submit:hover, .search-form .search-submit:focus, .search-form .search-submit:active {
+      background-color: transparent; }
+    .search-form .search-submit:focus {
+      outline: none; }
+
+.result {
+  opacity: 1;
+  transition: opacity ease .3s; }
+  .result .ng-enter-stagger.ng-leave-stagger {
+    transition-delay: 0.01s; }
+  .result.ng-enter, .result.ng-enter-active {
+    opacity: 0; }
+  .result.ng-leave, .result.ng-leave-active {
+    opacity: 0; }
+  .result.ng-move, .result.ng-move-active {
+    opacity: 0; }
+
+/*# sourceMappingURL=styles.css.map */
