@@ -15,20 +15,6 @@ app.controller('SearchCtrl', ['$scope', '$http', 'apiAuth', function ($scope, $h
     results: []
   };
   $scope.currentSearch = Object.create(searchTemplate);
-  //Recent searches collection
-  $scope.recentSearches = [];
-  //Sidebar state
-  $scope.showSideBar = false;
-  //Dynamic boolean for sidebar display
-  $scope.hasRecentSearches = function () {
-    return $scope.recentSearches.length > 0 && $scope.showSideBar;
-  };
-  //Move old search to history
-  var moveCurrentSearch = function () {
-    $scope.recentSearches.push($scope.currentSearch.searchStr);
-    $scope.currentSearch.searchStr = '';
-    $scope.searchForm.$setPristine();
-  };
   //JsonP request to Instagram
   $scope.getResults = function () {
     if($scope.searchForm.$invalid) return;
@@ -55,7 +41,5 @@ app.controller('SearchCtrl', ['$scope', '$http', 'apiAuth', function ($scope, $h
     xhr.error(function () {
       $scope.currentSearch.message = "There has been an error with your search.";
     });
-
-    moveCurrentSearch();
   };
 }]);
